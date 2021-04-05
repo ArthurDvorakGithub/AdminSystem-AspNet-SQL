@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Администратор\\source\\repos\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj": {}
+    "C:\\Users\\Администратор\\source\\repos\\IBA\\OfficeGame\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Администратор\\source\\repos\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj": {
+    "C:\\Users\\Администратор\\source\\repos\\IBA\\OfficeGame\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj",
+        "projectUniqueName": "C:\\Users\\Администратор\\source\\repos\\IBA\\OfficeGame\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj",
         "projectName": "OfficemanFantasy",
-        "projectPath": "C:\\Users\\Администратор\\source\\repos\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj",
+        "projectPath": "C:\\Users\\Администратор\\source\\repos\\IBA\\OfficeGame\\OfficemanFantasy\\OfficemanFantasy\\OfficemanFantasy.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Администратор\\source\\repos\\OfficemanFantasy\\OfficemanFantasy\\obj\\",
+        "outputPath": "C:\\Users\\Администратор\\source\\repos\\IBA\\OfficeGame\\OfficemanFantasy\\OfficemanFantasy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
