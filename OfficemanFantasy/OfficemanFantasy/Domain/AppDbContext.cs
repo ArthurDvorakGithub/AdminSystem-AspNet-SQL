@@ -37,8 +37,8 @@ namespace OfficemanFantasy.Domain
             modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
             {
                 Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
-                UserName = "user",
-                NormalizedUserName = "USER",
+                UserName = "admin",
+                NormalizedUserName = "ADMIN",
                 Email = "my@email.com",
                 NormalizedEmail = "MY@EMAIL.COM",
                 EmailConfirmed = true,

@@ -26,12 +26,6 @@ namespace OfficemanFantasy.Domain.Repositories.EntityFramework
             return context.Users.FirstOrDefault(x => x.Id == id);
         }
 
-        //Выбираем по ключевому слову из списка
-        public User GetUserByCodeWord(string codeWord)
-        {
-            return context.Users.FirstOrDefault(x => x.CodeWord == codeWord);
-        }
-
         public void SaveUser(User entity)
         {
             //Если идентификатор отсутствует , то помечаем его как новый обьект - .Added

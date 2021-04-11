@@ -13,9 +13,6 @@ namespace OfficemanFantasy.Domain.Entities
         [Display(Name = "Имя игрока")]
         public override string Title { get; set; } = "Имя нового игрока";
 
-        [Required]
-        public string CodeWord { get; set; }
-
         [Display(Name = "Фамилия игрока")]
         public override string Subtitle { get; set; } = "Фамилия нового игрока";
 

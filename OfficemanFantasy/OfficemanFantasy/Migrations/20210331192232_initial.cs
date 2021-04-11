@@ -120,7 +120,6 @@ namespace OfficemanFantasy.Migrations
                     MetaKeywords = table.Column<string>(nullable: true),
                     DateAdded = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: false),
-                    CodeWord = table.Column<string>(nullable: false),
                     Subtitle = table.Column<string>(nullable: true),
                     Text = table.Column<string>(nullable: true)
                 },
