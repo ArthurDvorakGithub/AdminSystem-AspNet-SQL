@@ -30,5 +30,6 @@ namespace OfficemanFantasy.Domain.Entities
 
         [Display(Name = "Уровень Персонажа")]
         public virtual string LevelUnit { get; set; }
+        //требуется добавить
     }
 }

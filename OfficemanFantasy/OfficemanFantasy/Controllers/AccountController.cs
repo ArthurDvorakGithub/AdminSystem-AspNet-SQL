@@ -39,6 +39,7 @@ namespace OfficemanFantasy.Controllers
                     Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
                     if (result.Succeeded)
                     {
+                        //Запись в БД для статистики
                         return Redirect(returnUrl ?? "/");
                     }
                 }
@@ -50,6 +51,7 @@ namespace OfficemanFantasy.Controllers
         [Authorize]
         public async Task<IActionResult> Logout()
         {
+            //Запись в БД для статистики
             await signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }

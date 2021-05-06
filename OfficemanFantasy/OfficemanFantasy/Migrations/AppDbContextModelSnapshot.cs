@@ -49,7 +49,7 @@ namespace OfficemanFantasy.Migrations
                         new
                         {
                             Id = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
-                            ConcurrencyStamp = "e79d8a56-c943-430e-8dc1-5cb327549a6b",
+                            ConcurrencyStamp = "74e6b691-3d93-49e9-a74e-91b7ef12d91d",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,17 +148,17 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "63a4874e-8daa-4529-923e-48efaefa5469",
+                            ConcurrencyStamp = "e97940b8-3251-4b5c-b11b-d101a083a7ec",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
-                            NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDrGRj04N34u3L2UtuDmOeIMUjJb8DQz1n2SO8gN+wgdVYf01IASfHPPMkGGgIUPog==",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEF/DEB9Ehzg+UVQqIbLpKlV7LPIf9v0lDT9GXMcqIhZO/87JniIQIMTslA8pGCl+XQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
-                            UserName = "user"
+                            UserName = "admin"
                         });
                 });
 
@@ -332,7 +332,7 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2021, 3, 31, 19, 22, 27, 911, DateTimeKind.Utc).AddTicks(3223),
+                            DateAdded = new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(888),
                             Text = "Описание страницы",
                             Title = "Главная"
                         },
@@ -340,7 +340,7 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2021, 3, 31, 19, 22, 27, 911, DateTimeKind.Utc).AddTicks(9232),
+                            DateAdded = new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(7503),
                             Text = "Описание страницы",
                             Title = "Наши услуги"
                         },
@@ -348,7 +348,7 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2021, 3, 31, 19, 22, 27, 911, DateTimeKind.Utc).AddTicks(9464),
+                            DateAdded = new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(7768),
                             Text = "Описание страницы",
                             Title = "Контакты"
                         });
@@ -408,10 +408,6 @@ namespace OfficemanFantasy.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CodeWord")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateAdded")
                         .HasColumnType("datetime2");
