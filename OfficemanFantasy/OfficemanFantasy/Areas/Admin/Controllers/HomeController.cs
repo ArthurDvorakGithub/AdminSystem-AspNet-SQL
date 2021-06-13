@@ -20,5 +20,6 @@ namespace OfficemanFantasy.Areas.Admin.Controllers
         {
             return View(dataManager.Users.GetAllUsers());
         }
+
     }
 }

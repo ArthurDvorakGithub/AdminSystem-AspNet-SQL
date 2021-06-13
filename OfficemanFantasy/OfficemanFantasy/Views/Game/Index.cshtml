@@ -1,0 +1,23 @@
+﻿@{ 
+    ViewData["Title"] = "Index";
+    Unit[] units = (Unit[])ViewData["Units"];
+}
+<h1>Список юнитов</h1>
+
+<div class="div-box">
+    <div class="row">
+        @for (int i = 0; i < units.Length; i++)
+        {
+        <a class="div-box" href="/Game/UserInfo?id=@units[i].Id" style="width: 10%;">
+            <div class="div-box" style="width: 10%">
+                <img src=@units[i].AvatarURL class="fa-id-card" alt="..." />
+                <div class="fa-id-card">
+                    <h5 class="title">@units[i].Name</h5>
+                    <p class="fa-text-height">@units[i].Health</p>
+
+                </div>
+            </div>
+        </a>
+        }
+    </div>
+</div>

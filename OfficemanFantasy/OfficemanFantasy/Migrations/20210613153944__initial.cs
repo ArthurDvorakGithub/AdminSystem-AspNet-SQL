@@ -87,22 +87,28 @@ namespace OfficemanFantasy.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tiles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TileURL = table.Column<string>(nullable: true),
+                    TileName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tiles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Units",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    TitleImagePath = table.Column<string>(nullable: true),
-                    MetaTitle = table.Column<string>(nullable: true),
-                    MetaDescription = table.Column<string>(nullable: true),
-                    MetaKeywords = table.Column<string>(nullable: true),
-                    DateAdded = table.Column<DateTime>(nullable: false),
-                    Title = table.Column<string>(nullable: false),
-                    CodeWord = table.Column<string>(nullable: false),
-                    Subtitle = table.Column<string>(nullable: true),
-                    Text = table.Column<string>(nullable: true),
-                    HealthUnit = table.Column<string>(nullable: true),
-                    ArsenalUnit = table.Column<string>(nullable: true),
-                    LevelUnit = table.Column<string>(nullable: true)
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    Health = table.Column<int>(nullable: false),
+                    AvatarURL = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -237,21 +243,21 @@ namespace OfficemanFantasy.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "44546e06-8719-4ad8-b88a-f271ae9d6eab", "74e6b691-3d93-49e9-a74e-91b7ef12d91d", "admin", "ADMIN" });
+                values: new object[] { "44546e06-8719-4ad8-b88a-f271ae9d6eab", "5525df99-6e8c-4f15-be30-8b9d7e08d443", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "3b62472e-4f66-49fa-a20f-e7685b9565d8", 0, "e97940b8-3251-4b5c-b11b-d101a083a7ec", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEF/DEB9Ehzg+UVQqIbLpKlV7LPIf9v0lDT9GXMcqIhZO/87JniIQIMTslA8pGCl+XQ==", null, false, "", false, "admin" });
+                values: new object[] { "3b62472e-4f66-49fa-a20f-e7685b9565d8", 0, "8c9750a2-aa93-4540-8fad-d1ff6f8a5d3e", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEM7jTLW1HgJa4s5Y1avqckhZdQzrhSUNMEYJNK0857cAmId9Hrs6z0SEoufoB5aYWQ==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "TextFields",
                 columns: new[] { "Id", "CodeWord", "DateAdded", "MetaDescription", "MetaKeywords", "MetaTitle", "Subtitle", "Text", "Title", "TitleImagePath" },
                 values: new object[,]
                 {
-                    { new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"), "PageIndex", new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(888), null, null, null, null, "Описание страницы", "Главная", null },
-                    { new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"), "PageServices", new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(7503), null, null, null, null, "Описание страницы", "Наши услуги", null },
-                    { new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"), "PageContacts", new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(7768), null, null, null, null, "Описание страницы", "Контакты", null }
+                    { new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"), "PageIndex", new DateTime(2021, 6, 13, 15, 39, 42, 459, DateTimeKind.Utc).AddTicks(255), null, null, null, null, "Описание страницы", "Главная", null },
+                    { new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"), "PageServices", new DateTime(2021, 6, 13, 15, 39, 42, 459, DateTimeKind.Utc).AddTicks(6950), null, null, null, null, "Описание страницы", "Наши услуги", null },
+                    { new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"), "PageContacts", new DateTime(2021, 6, 13, 15, 39, 42, 459, DateTimeKind.Utc).AddTicks(7188), null, null, null, null, "Описание страницы", "Контакты", null }
                 });
 
             migrationBuilder.InsertData(
@@ -321,6 +327,9 @@ namespace OfficemanFantasy.Migrations
 
             migrationBuilder.DropTable(
                 name: "TextFields");
+
+            migrationBuilder.DropTable(
+                name: "Tiles");
 
             migrationBuilder.DropTable(
                 name: "Units");

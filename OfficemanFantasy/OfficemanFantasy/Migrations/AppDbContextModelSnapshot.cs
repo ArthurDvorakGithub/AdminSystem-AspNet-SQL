@@ -49,7 +49,7 @@ namespace OfficemanFantasy.Migrations
                         new
                         {
                             Id = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
-                            ConcurrencyStamp = "74e6b691-3d93-49e9-a74e-91b7ef12d91d",
+                            ConcurrencyStamp = "5525df99-6e8c-4f15-be30-8b9d7e08d443",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,13 +148,13 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e97940b8-3251-4b5c-b11b-d101a083a7ec",
+                            ConcurrencyStamp = "8c9750a2-aa93-4540-8fad-d1ff6f8a5d3e",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEF/DEB9Ehzg+UVQqIbLpKlV7LPIf9v0lDT9GXMcqIhZO/87JniIQIMTslA8pGCl+XQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEM7jTLW1HgJa4s5Y1avqckhZdQzrhSUNMEYJNK0857cAmId9Hrs6z0SEoufoB5aYWQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -332,7 +332,7 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(888),
+                            DateAdded = new DateTime(2021, 6, 13, 15, 39, 42, 459, DateTimeKind.Utc).AddTicks(255),
                             Text = "Описание страницы",
                             Title = "Главная"
                         },
@@ -340,7 +340,7 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(7503),
+                            DateAdded = new DateTime(2021, 6, 13, 15, 39, 42, 459, DateTimeKind.Utc).AddTicks(6950),
                             Text = "Описание страницы",
                             Title = "Наши услуги"
                         },
@@ -348,59 +348,10 @@ namespace OfficemanFantasy.Migrations
                         {
                             Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2021, 5, 6, 16, 57, 19, 394, DateTimeKind.Utc).AddTicks(7768),
+                            DateAdded = new DateTime(2021, 6, 13, 15, 39, 42, 459, DateTimeKind.Utc).AddTicks(7188),
                             Text = "Описание страницы",
                             Title = "Контакты"
                         });
-                });
-
-            modelBuilder.Entity("OfficemanFantasy.Domain.Entities.Unit", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ArsenalUnit")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CodeWord")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("HealthUnit")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LevelUnit")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MetaDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MetaKeywords")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MetaTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Subtitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TitleImagePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Units");
                 });
 
             modelBuilder.Entity("OfficemanFantasy.Domain.Entities.User", b =>
@@ -437,6 +388,45 @@ namespace OfficemanFantasy.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("OfficemanFantasy.Models.Unit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AvatarURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Health")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Units");
+                });
+
+            modelBuilder.Entity("WebGameNetCore.Models.Tile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("TileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TileURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

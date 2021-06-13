@@ -1,35 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OfficemanFantasy.Domain.Entities
+namespace OfficemanFantasy.Models
 {
-    public class Unit : EntityBase
+    public class Unit
     {
-        [Required(ErrorMessage = "Заполните название, и описание персонажа")]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Health { get; set; }
+        public string AvatarURL { get; set; }
 
-        [Display(Name = "Имя персонажа")]        
-        public override string Title { get; set; } = "Название персонажа";
-
-        [Required]
-        public string CodeWord { get; set; }
-
-        [Display(Name = "Кратко о персонаже")]
-        public override string Subtitle { get; set; } = "Краткое описание";
-
-        [Display(Name = "Полное описание")]
-        public override string Text { get; set; } = "Описание персонажа";
-
-        [Display(Name = "Здоровье")]
-        public virtual string HealthUnit { get; set; }
-
-        [Display(Name = "Арсенал персонажа")]
-        public virtual string ArsenalUnit { get; set; }
-
-        [Display(Name = "Уровень Персонажа")]
-        public virtual string LevelUnit { get; set; }
-        //требуется добавить
+        public Unit(string name, int health, string avatarURL)
+        {
+            Name = name;
+            Health = health;
+            AvatarURL = avatarURL;
+        }
     }
 }

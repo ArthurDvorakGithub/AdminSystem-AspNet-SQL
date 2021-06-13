@@ -308,3 +308,5 @@ C:\Users\Администратор\source\repos\IBA\OfficeGame\OfficemanFantasy
 C:\Users\Администратор\source\repos\IBA\OfficeGame\OfficemanFantasy\OfficemanFantasy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\Users\Администратор\source\repos\IBA\OfficeGame\OfficemanFantasy\OfficemanFantasy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\TextFields\Edit.cshtml.g.cs
 C:\Users\Администратор\source\repos\IBA\OfficeGame\OfficemanFantasy\OfficemanFantasy\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\Edit.cshtml.g.cs
+C:\Users\Администратор\source\repos\IBA\OfficeGame\OfficemanFantasy\OfficemanFantasy\obj\Debug\netcoreapp3.1\Razor\Views\Game\Index.cshtml.g.cs
+C:\Users\Администратор\source\repos\IBA\OfficeGame\OfficemanFantasy\OfficemanFantasy\obj\Debug\netcoreapp3.1\Razor\Views\Game\UnitInfo.cshtml.g.cs

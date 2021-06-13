@@ -2,11 +2,12 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OfficemanFantasy.Domain.Entities;
+using OfficemanFantasy.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using WebGameNetCore.Models;
 
 namespace OfficemanFantasy.Domain
 {
@@ -16,10 +17,10 @@ namespace OfficemanFantasy.Domain
         
         //связываем наши классы
         public DbSet<TextField> TextFields { get; set; }
-        public DbSet<Unit> Units { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Npc> Npcs { get; set; }
-
+        public DbSet<Tile> Tiles { get; set; }
+        public DbSet<Unit> Units { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -56,7 +57,7 @@ namespace OfficemanFantasy.Domain
 
             // Личный кабинет Пользователя(User) на сайте ----------------------------------------------------------------------------
 
-            //...
+           
 
             // Даннные о персонажах в БД ---------------------------------------------------------------------------------------------
 

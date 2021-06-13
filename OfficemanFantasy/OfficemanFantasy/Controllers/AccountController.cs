@@ -40,6 +40,9 @@ namespace OfficemanFantasy.Controllers
                     if (result.Succeeded)
                     {
                         //Запись в БД для статистики
+                        //string userName = User.Identity.Name
+                        //DateTime userDate = userDate.Now;
+                        //repository.SaveStats(userName, userDate)
                         return Redirect(returnUrl ?? "/");
                     }
                 }

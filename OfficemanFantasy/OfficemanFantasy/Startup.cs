@@ -31,8 +31,9 @@ namespace OfficemanFantasy
             //подключаем нужный функционал приложения в качестве сервисов
             services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
             services.AddTransient<INpcRepository, EFNpcRepository>();
-            services.AddTransient<IUnitRepository, EFUnitRepository>();
             services.AddTransient<IUserRepository, EFUserRepository>();
+            services.AddTransient<IUnitRepository, EFUnitRepository>();
+            services.AddTransient<ITileRepository, EFTileRepository>();
             services.AddTransient<DataManager>();
 
             //подключаем контекст БД
@@ -59,7 +60,7 @@ namespace OfficemanFantasy
                 options.SlidingExpiration = true;
             });
 
-            //настраиваем политику авторизации для Админ Ареа
+            //настраиваем политику авторизации для Админ Ареа*********************************
             services.AddAuthorization(x =>
             {
                 x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
@@ -73,6 +74,8 @@ namespace OfficemanFantasy
             })
                 //выставлем совместимость с asp.net core 3.0
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
+
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -95,6 +98,7 @@ namespace OfficemanFantasy
             //добавлем нужные нам маршруты (эндпоинты)
             app.UseEndpoints(endpoints =>
             {
+               
                 endpoints.MapControllerRoute("admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });

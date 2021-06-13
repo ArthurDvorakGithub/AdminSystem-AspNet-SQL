@@ -5,20 +5,24 @@ namespace OfficemanFantasy.Domain
     public class DataManager
     {
         public ITextFieldsRepository TextFields { get; set; }
-        public INpcRepository Npcs { get; set; }
 
-        public IUnitRepository Units { get; set; }
+        public INpcRepository Npcs { get; set; }
 
         public IUserRepository Users { get; set; }
 
+        public ITileRepository Tiles { get; set; }
+
+        public IUnitRepository Units { get; set; }
 
 
-        public DataManager(ITextFieldsRepository textFieldsRepository, INpcRepository npcRepository, IUnitRepository unitRepository, IUserRepository userRepository)
+
+        public DataManager(ITextFieldsRepository textFieldsRepository, IUnitRepository unitRepository, INpcRepository npcRepository, IUserRepository userRepository, ITileRepository tileRepository)
         {
             TextFields = textFieldsRepository;
             Npcs = npcRepository;
-            Units = unitRepository;
             Users = userRepository;
+            Tiles = tileRepository;
+            Units = unitRepository;
         }
     }
 }
