@@ -18,5 +18,10 @@ namespace OfficemanFantasy.Models
             Health = health;
             AvatarURL = avatarURL;
         }
+
+        public void ApplyDamage(int damage)
+        {
+            Health -= damage;
+        }
     }
 }
